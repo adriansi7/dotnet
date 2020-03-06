@@ -18,9 +18,10 @@ namespace Ex02
                 Program.result = doOperation();
                 printResult();
             }
-            catch (System.InvalidOperationException e) {
+            catch (System.InvalidOperationException e)
+            {
                 Console.WriteLine(System.Environment.NewLine + e);
-            }            
+            }
         }
 
         static void readInput()
@@ -50,7 +51,7 @@ namespace Ex02
                     return Program.a * Program.b;
 
                 case '/':
-                    return (float) Program.a / Program.b;
+                    return (float)Program.a / Program.b;
 
                 default:
                     throw new System.InvalidOperationException(System.Environment.NewLine + "Operation is not defined");
