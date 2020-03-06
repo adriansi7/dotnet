@@ -21,7 +21,7 @@ namespace Ex01
 
             for (int i = 0; i < lettersCount; i++)
             {
-                Console.WriteLine("\nEnter letter {0}", i + 1);
+                Console.WriteLine("\nEnter letter {0}", i+1);
                 letters[i] = Console.ReadKey().KeyChar;
             }
 
