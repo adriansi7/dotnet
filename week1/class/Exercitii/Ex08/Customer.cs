@@ -16,5 +16,20 @@ namespace Ex08
             this.name = name;
             this.consumption = consumption;
         }
+
+        public int GetId()
+        {
+            return this.id;
+        }
+
+        public string GetName()
+        {
+            return this.name;
+        }
+
+        public double GetConsumption()
+        {
+            return this.consumption;
+        }
     }
 }
