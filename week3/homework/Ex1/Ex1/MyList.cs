@@ -102,17 +102,17 @@ namespace Ex1
             return -1;
         }
 
-        public IEnumerator GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
-            return this.GetEnumerator();
+            for (int i = 0; i < this.Count; i++)
+            {
+                yield return this.items[i];
+            }
         }
 
-        IEnumerator<T> IEnumerable<T>.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            foreach(T item in this.items)
-            {
-                yield return item;
-            }
+            return this.GetEnumerator();
         }
     }
 }
