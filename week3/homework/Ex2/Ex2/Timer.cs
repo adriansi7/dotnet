@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Ex2
 {
     class Timer
     {
         private int threshold;
-        private int total;
         public event EventHandler AlarmEvent;
 
         public Timer(int Threshold)
@@ -15,12 +15,11 @@ namespace Ex2
             this.threshold = Threshold;
         }
 
-        public void Add(int x)
+        public void Elapse()
         {
-            this.total += x;
-
-            if (this.total >= this.threshold)
+            while (true)
             {
+                Thread.Sleep(this.threshold);
                 OnThresholdReached(EventArgs.Empty);
             }
         }

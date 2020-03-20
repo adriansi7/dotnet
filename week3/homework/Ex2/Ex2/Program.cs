@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Threading;
-using System.Timers;
 
 namespace Ex2
 {
@@ -8,17 +6,11 @@ namespace Ex2
     {
         static void Main(string[] args)
         {
-
-            Timer x = new Timer(1);
+            Timer x = new Timer(3000);
             x.AlarmEvent += processEvent;
-
-            while (true)
-            {
-                x.Add(1);
-                Thread.Sleep(3000);
-            }
-            
+            x.Elapse();
         }
+
         static void processEvent(object sender, EventArgs e)
         {
             Console.WriteLine("I am processing the event.");            
