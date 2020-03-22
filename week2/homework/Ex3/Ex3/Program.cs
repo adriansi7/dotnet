@@ -1,6 +1,6 @@
 ﻿using Ex3.Classes;
 using Ex3.Helpers;
-using Ex3.Log;
+using Ex3.Logging;
 using System;
 using System.Collections.Generic;
 

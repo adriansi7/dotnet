@@ -1,4 +1,4 @@
-﻿using Ex3.Log;
+﻿using Ex3.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
