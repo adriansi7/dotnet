@@ -5,12 +5,14 @@ using System.Text;
 
 namespace Ex2.Classes
 {
-    class Car: IVehicle
+    [Serializable]
+    class Car : IVehicle
     {
         public string Make { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
         public decimal Price { get; set; }
+        public Producer Producer { get; set; }
 
         public Car(string make, string model, int year, decimal price)
         {
@@ -20,9 +22,9 @@ namespace Ex2.Classes
             this.Price = price;
         }
 
-        public override string ToString() 
+        public string Print()
         {
-            return "Car make " + this.Make + ", model " + this.Model + ", year " + this.Year + ", price " + this.Price;
+            return "Producer " + this.Producer.Print() + ", car make " + this.Make + ", model " + this.Model + ", year " + this.Year + ", price " + this.Price + " EUR";
         }
     }
 }
